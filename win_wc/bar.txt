@@ -1,0 +1,14 @@
+NAME wc -- get (English) word count
+SYNOPSIS wc name1 ...
+DESCRIPTION	wc provides a count of the words, text lines, and roffcontrol lines for each argument file.
+
+
+A text line is a sequence of characters not beginning with"." and ended by a new--line. A roff control line is a line
+
+
+beginning with ".". A word is a sequence of charactersbounded by the beginning of a line, by the end of a line, or by a blank or a tab.
+FILES	
+SEE_ALSO	roff
+DIAGNOSTICS	none; arguments not found are ignored.
+BUGS	
+OWNER	jfo
