@@ -12,9 +12,9 @@ int main(int argc, char **argv)
 {
 	if (argc < 2) {
 		cout << "ERROR: need filename or mask";
-		exit(0);
 	}
 	
+	system("pause");
     return 0;
 }
 

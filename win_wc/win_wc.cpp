@@ -51,6 +51,7 @@ int main(int argc, char **argv)
 {
 	if (argc < 2)
 		cout << "ERROR: no file name" << endl;
+	cout << "lines	words	chars	filename" << endl;
 	for (int i = 1; i < argc; i++)
 		counter(argv[i]);
 	if (argc > 2)
