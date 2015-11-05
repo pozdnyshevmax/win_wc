@@ -10,7 +10,7 @@ typedef long long count_wc;
 
 count_wc totalL = 0, totalC = 0, totalW = 0;
 
-void report(char *file, count_wc lines, count_wc words, count_wc chars) {
+void report(char *file, count_wc lines, count_wc words, count_wc chars) { // format output
 	cout << lines << "	" << words << "	" << chars << "	" << file << endl;
 }
 
@@ -35,7 +35,7 @@ void counter(char *file) {
 	bool prevC = false; // previous char isalpha
 	for (count_wc i = 0; i < countC + 1; i += 1) {
 		if (buffer[i] == '\n') countL++;
-		if (!isalpha(buffer[i]) && prevC == true) countW++;
+		if (!isalpha(buffer[i]) && prevC == true) countW++; // detect end of words
 		prevC = isalpha(buffer[i]);
 	}
 	if (!countC) countL = 0; // if file empty
@@ -52,10 +52,10 @@ int main(int argc, char **argv)
 	if (argc < 2)
 		cout << "ERROR: no file name" << endl;
 	cout << "lines	words	chars	filename" << endl;
-	for (int i = 1; i < argc; i++)
+	for (int i = 1; i < argc; i++) // for all input files
 		counter(argv[i]);
-	if (argc > 2)
-		report("total",totalL,totalW,totalC);
+	if (argc > 2) //if count of files > 1
+		report("total",totalL,totalW,totalC); // report total statistic
 	system("pause");
 	return 0;
 }
